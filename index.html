@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Главная</title>
+</head>
+<body class="body">
+<!-- HEADER -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <div class="header__left-block">
+                    <div class="header__menu-group">
+                        <a href="/" class="header__menu-group-link">
+                            <img src="./img/svg/menu-group.svg" alt="Меню" class="header__menu-group-pic">
+                        </a>
+                    </div>
+                    <div class="header__logo">
+                        <img src="./img/svg/logo-new_ru.svg" alt="Главная" class="header_logo-pic">
+                    </div>
+                    <div class="header__logo-descr">
+                        <p class="header__logo-descr-text">
+                            ПРОИЗВОДСТВО СПЕЦТЕХНИКИ, ПРИЦЕПОВ<br>
+                            И КОММЕРЧЕСКИХ АВТОМОБИЛЕЙ
+                        </p>
+                    </div>
+                </div>
+                <div class="header__right-block">
+                    <div class="header__right-block-items">
+                        <div class="header__right-block-links">
+                            <div class="header__contact-info">
+                                <ul class="header__contact-info-items">
+                                    <li class="header__contact-info-item">
+                                        <a href="tel:+79603721993" class="phone">+7 (960) 372-19-93</a>
+                                    </li>
+                                    <li class="header__contact-info-item">
+                                        <a href="tel:+79603902544" class="phone">+7 (960) 390-25-44</a>
+                                    </li>
+                                    <li class="header__contact-info-item">
+                                        <a href="mailto:mail@specavto.com" class="email">mail@specavto.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <nav class="header__nav">
+                                <ul class="header__list">
+                                    <li class="header__item">
+                                        <a href="#!" class="header__link">МОДЕЛЬНЫЙ РЯД</a>
+                                    </li>
+                                    <li class="header__item">
+                                        <a href="#!" class="header__link">НОВОСТИ</a>
+                                    </li>
+                                    <li class="header__item">
+                                        <a href="#!" class="header__link">СОТРУДНИЧЕСТВО</a>
+                                    </li>
+                                    <li class="header__item">
+                                        <a href="#!" class="header__link">АКЦИИ</a>
+                                    </li>
+                                    <li class="header__item">
+                                        <a href="#!" class="header__link">КОНТАКТЫ</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div id="header__language-switcher" class="header__language-switcher">
+                            <span onclick="changeLanguage('ru')" class="header__language-option">RU</span>
+                            <span class="header__language-separator">/</span>
+                            <span onclick="changeLanguage('eng')" class="header__language-option">ENG</span>
+                          </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- MAIN -->
+    <main class="main">
+<!-- INTRO START -->
+        <section class="intro">
+            <div class="intro__wrapper">
+                <div class="intro__main-offer">
+                    <h1 class="intro__offer-text-colored">
+                        Лучшее
+                    </h1>
+                    <h1 class="intro__offer-text">
+                       предложение 
+                    </h1>
+                </div>
+                <div class="intro__offer-date">
+                    <div class="intro__year-item">
+                        <h2 class="intro__year">2023</h2>
+                    </div>
+                    <div class="intro__offer-car-brand">
+                        <p class="intro__car">Топливозаправщик<br>
+                            УАЗ-362233</p>
+                        <p class="intro__warranty">ГАРАНТИЯ 12 МЕСЯЦЕВ</p>
+                    </div>
+                </div>
+                <div class="intro__arrows-btn">
+                    <span class="intro__arrow-btn" onclick="previousImage()">
+                        <img src="./img/svg/left-btn-arrow.svg" alt="Previous" />
+                    </span>
+                    <span class="intro__arrow-btn" onclick="nextImage()">
+                        <img src="./img/svg/right-btn-arrow.svg" alt="Next" />
+                    </span>
+                </div>
+            </div>
+            <div class="intro__offered-car">
+                <img id="car-image" src="./img/svg/refueller.svg" alt="Car Image">
+            </div>
+        </section>
+<!-- INTRO END -->
+<!-- CARS START -->
+        <section class="cars">
+            <div class="cars__title">
+                <h1 class="cars__title-text"> <span class="highlight-cars__title-text">производство</span> и <span class="highlight-cars__title-text">продажа</span> <br>
+                    спецавтомобилей
+                </h1>              
+            </div>
+            <div class="cars__tabs">
+                <div class="cars__tab-active">спецтехника<br>
+                    УАЗ
+                </div>
+                <div class="cars__tab">спецтехника<br>
+                    ГАЗ
+                </div>
+                <div class="cars__tab">специальное<br>
+                    оборудование
+                </div>
+                <div class="cars__tab">прицепы</div>
+            </div>
+            <div class="cars__table">
+                <table class="cars__custom-table">
+                    <tr>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_1.svg" alt="Car Pic1">
+                            <figcaption class="cars__pic-decsr">«Хлебовоз» УАЗ 290513</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_2.svg" alt="Car Pic2">
+                            <figcaption class="cars__pic-decsr">«Автолавка» УАЗ-290513</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_3.svg" alt="Car Pic3">
+                            <figcaption class="cars__pic-decsr">«Пожарный» УАЗ-362223</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_4.svg" alt="Car Pic4">
+                            <figcaption class="cars__pic-decsr">«Дезинфекционная установка»<br>УАЗ-330365, УАЗ-236021(22)</figcaption>
+                        </td>
+                    </tr>
+                    <tr class="cars-row-params">
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_5.svg" alt="Car Pic5">
+                            <figcaption class="cars__pic-decsr">«Молоковоз» УАЗ-362213</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_6.svg" alt="Car Pic6">
+                            <figcaption class="cars__pic-decsr">«Топливозаправщик» УАЗ-362233</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_7.svg" alt="Car Pic7">
+                            <figcaption class="cars__pic-decsr">«Молоковоз» УАЗ-36221</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_8.svg" alt="Car Pic8">
+                            <figcaption class="cars__pic-decsr">«Молоковоз» с рефрижераторной<br>установкой УАЗ-36221</figcaption>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_9.svg" alt="Car Pic9">
+                            <figcaption class="cars__pic-decsr">«ППС» УАЗ-HUNTER</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_10.svg" alt="Car Pic10">
+                            <figcaption class="cars__pic-decsr">«Хлебовоз» УАЗ-2905</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_11.svg" alt="Car Pic11">
+                            <figcaption class="cars__pic-decsr">«Автолавка» УАЗ-29051/figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_12.svg" alt="Car Pic12">
+                            <figcaption class="cars__pic-decsr">«Продовольственный» УАЗ-29051</figcaption>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_13.svg" alt="Car Pic13">
+                            <figcaption class="cars__pic-decsr">«Автомастерская» УАЗ-390945</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_14.svg" alt="Car Pic14">
+                            <figcaption class="cars__pic-decsr">«Малый лесопатрульный<br>комплекс» УАЗ 390945</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_15.svg" alt="Car Pic15">
+                            <figcaption class="cars__pic-decsr">«Дезинфектор ОДАС» УАЗ-36224</figcaption>
+                        </td>
+                        <td class="cars__tab-cell-params">
+                            <img id="car-pic" src="./img/svg/car_preview_16.svg" alt="Car Pic16">
+                            <figcaption class="cars__pic-decsr">«МЧС» УАЗ-220695</figcaption>
+                        </td>
+                    </tr>
+                </table>
+                <div class="cars__load">
+                    <button class="cars__load-btn">
+                        показать еще
+                    </button>
+                </div>
+            </div>
+        </section>
+
+<!-- CARS END -->
+<!-- NEWS START -->
+        <section class="news__section">
+            <div class="news__blocks">
+                <div class="news__block-title">
+                    <div class="news__block-title-opt">
+                        <h1 class="news__title"><span class="highlight-news__title">Новости</span> компании</h1>
+                    </div>
+                </div>
+                <div class="news__block-switcher">
+                    <div class="news__buttons">
+                        <span class="news__button news__button-prev" onclick="previousImage()">
+                            <img src="./img/svg/left-btn-arrow.svg" alt="Previous" />
+                        </span>
+                        <span class="news__button news__button-next" onclick="nextImage()">
+                            <img src="./img/svg/right-btn-arrow.svg" alt="Next" />
+                        </span>
+                    </div>
+                    <div class="news__table">
+                        <div class="news__bg">
+                            <img id="n-pic" src="./img/svg/news_pic_1.svg" alt="News Pic1">
+                            <div class="news__text">
+                                <h2 class="news__article">На днях наша компания ООО «Спецавто» отправила три Пожарные машины в
+                                    Казахстан.</h2>
+                                <figcaption class="news__pic-decsr">На днях наша компания ООО «Спецавто» отправила три Пожарные
+                                    машины в Казахстан. Теперь они верой и правдой будут служить во благо общества!</figcaption>
+                                <div class="news__info">
+                                    <a href="#" class="news__link">Новости компании</a>
+                                    <span class="news__date">26.08.2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__bg">
+                            <img id="n-pic" src="./img/svg/news_pic_2.svg" alt="News Pic2">
+                            <div class="news__text">
+                                <h2 class="news__article">Компания ООО «Спецавто» разработала автомобиль для заправки спецтехники</h2>
+                                <figcaption class="news__pic-decsr">Автомобиль предназначена для транспортирования и дозированного
+                                    отпуска светлых нефтепродуктов: бензин, дизельное топливо, керосин (плотностью....</figcaption>
+                                <div class="news__info">
+                                    <a href="#" class="news__link">Новости компании</a>
+                                    <span class="news__date">25.06.2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__bg">
+                            <img id="n-pic" src="./img/svg/news_pic_3.svg" alt="News Pic3">
+                            <div class="news__text">
+                                <h2 class="news__article">Участие в ПРОГРАММЕ VII Международного Форума-выставки производителей товаров
+                                    и услуг</h2>
+                                <figcaption class="news__pic-decsr">23 апреля ООО "Спецавто" принял участие в ПРОГРАММЕ VII
+                                    Международного Форума-выставки производителей товаров и услуг «Сделано ...</figcaption>
+                                <div class="news__info">
+                                    <a href="#" class="news__link">Новости компании</a>
+                                    <span class="news__date">03.06.2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__bg">
+                            <img id="n-pic" src="./img/svg/news_pic_4.svg" alt="News Pic4">
+                            <div class="news__text">
+                                <h2 class="news__article">Международная выставка строительной техники и технологий СТТ Expo 2023 идет
+                                    на рекорд</h2>
+                                <figcaption class="news__pic-decsr">CTT Expo в несколько раз превышает ожидания организаторов по
+                                    объему выставочной площади, количеству экспонентов, интересу со стороны </figcaption>
+                                <div class="news__info">
+                                    <a href="#" class="news__link">Новости компании</a>
+                                    <span class="news__date">07.03.2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- NEWS END -->
+<!-- PARTNERS START -->
+        <section class="partners">
+            <div class="partners__title-opt">
+                <h1 class="partners__title">
+                    Нам <span class="highlight-partners__title">доверяют:</span>
+                </h1>
+            </div>
+            <div class="partners__info">
+                <img class="partners__arrow-img" src="./img/svg/arrow_speed.svg" alt="Partners Image" class="partners-title__image">
+                <div class="partners__grid">
+                    <img src="./img/svg/logo_partner_1.svg" alt="Partner Logo 1">
+                    <img src="./img/svg/logo_partner_2.svg" alt="Partner Logo 2">
+                    <img src="./img/svg/logo_partner_3.svg" alt="Partner Logo 3">
+                    <img src="./img/svg/logo_partner_4.svg" alt="Partner Logo 4">
+                  </div>              
+            </div>
+        </section>
+<!-- PARTNERS END -->
+<!-- ADVANTAGES START -->
+        <section class="advantages">
+            <div class="advantages__wrapper">
+                <div class="advantages__block-descr">
+                    <h1 class="advantages__block-title"><span class="highlight-advantages__block-title">Почему</span> нас выбирают</h1>
+                </div>
+                <div class="avantages__article">
+                    <div class="advantages__image">
+                        <img src="./img/svg/advantages_image.svg" alt="Advantages Image">
+                    </div>
+                    <div class="advantages__image-descr">
+                        <div class="advantages__image-descr-article">
+                            <p>За многолетний период работы с серийными моделями УАЗ, мы достаточно хорошо изучили номенклатуру продукции, производимой Ульяновским Автомобильным Заводом. Отработанная нами технология переоборудования серийных образцов позволяет нам детально изучить все узлы и характеристики, использовать каждое преимущество автомобилей марки УАЗ. Для нас это особенно важно, т. к. главным нашим конкурентным преимуществом является качество производимой продукции.</p>
+                        </div>
+                        <div class="advantages__arrows-btn">
+                            <span class="arrow-btn" onclick="previousImage()">
+                                <img src="./img/svg/left-btn-arrow.svg" alt="Previous" />
+                            </span>
+                            <span class="arrow-btn" onclick="nextImage()">
+                                <img src="./img/svg/right-btn-arrow.svg" alt="Next" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages__items">
+                    <div class="advantage__cell">
+                        <img src="./img/svg/advantages_img_17years.svg" alt="17 Years">
+                    </div>
+                    <div class="advantage__cell">
+                        <img src="./img/svg/advantages_img_UAZ.svg" alt="UAZ">
+                    </div>
+                    <div class="advantage__cell">
+                        <img src="./img/svg/advantages_img_unic_dev.svg" alt="Unic">
+                    </div>
+                    <div class="advantage__cell">
+                        <img src="./img/svg/advantages_img_ISO.svg" alt="ISO">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- ADVANTAGES END -->
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__tabl">
+                <div class="footer__column-logo">
+                    <div class="header__left-block">
+                        <div class="header__logo">
+                            <img src="./img/svg/footer_logo.svg" alt="Главная" class="header_logo-pic">
+                        </div>
+                        <div class="header__logo-descr">
+                            <p class="header__logo-descr-text">
+                                ПРОИЗВОДСТВО СПЕЦТЕХНИКИ, ПРИЦЕПОВ<br>
+                                И КОММЕРЧЕСКИХ АВТОМОБИЛЕЙ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__column-connection">
+                    <div class="footer__contact_info">
+                        <div class="footer__list">
+                            <h4 class="footer__heading">МЕНЮ</h4>
+                            <ul class="footer__list">
+                                <li><a href="#" class="footer__link">Модельный ряд</a></li>
+                                <li><a href="#" class="footer__link">Новости</a></li>
+                                <li><a href="#" class="footer__link">Сотрудничество</a></li>
+                                <li><a href="#" class="footer__link">Тюнинг</a></li>
+                                <li><a href="#" class="footer__link">Контакты</a></li>
+                                <li><a href="#" class="footer__link">О компании</a></li>
+                                <li><a href="#" class="footer__link">Для дилеров</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__contact">
+                            <h4 class="footer__heading">КОНТАКТЫ</h4>
+                            <ul class="footer__list">
+                                <p class="footer__title-text">Адрес:</p>
+                                <p class="footer__text">432045, Россия,<br>
+                                    г. Ульяновск, ул. Московское<br>
+                                    шоссе, д.32, каб. 224</p>
+                                <p class="footer__title-text">Телефон:</p>
+                                <a href="tel:+79603721993" class="footer__text">+7 (960) 372-19-93</a><br>
+                                <a href="tel:+79603902544" class="footer__text">+7 (960) 390-25-44</a>
+                                <p class="footer__title-text">Почта:</p>
+                                <a href="mailto:mail@specavto.com" class="footer__text">mail@specavto.com</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
