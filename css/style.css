@@ -137,10 +137,10 @@ a:focus {
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
-a:active,
+/* a:active,
 a:hover {
     outline: 0;
-}
+} */
 
 /**
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
@@ -477,8 +477,20 @@ textarea {
   z-index: 9999;
 }
 
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 60px;
+  }
+}
+
 .wrapper {
-  width: 1483px;
+  max-width: 1483px;
   margin: 0 auto;
 }
 
@@ -489,12 +501,23 @@ textarea {
   justify-content: space-between;
 }
 
-.header__left-block, .header__right-block {
+/* .header__left-block, .header__right-block {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+} */
+
+
+.header__left-block {
+  flex: 1;
 }
+
+.header__right-block {
+  flex: 1;
+  justify-content: flex-end;
+}
+
 
 .header__menu-group-pic {
   margin-top: 5px;
@@ -534,6 +557,28 @@ textarea {
   margin-right: 0px;
 }
 
+@media (max-width: 768px) {
+  .header__contact-info-item {
+    margin-right: 20px;
+  }
+
+  .header__link {
+    font-size: 14px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__contact-info-item {
+    margin-right: 10px;
+  }
+
+  .header__link {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
+
 .phone, .email {
   font-weight: 600;
   font-size: 16px;
@@ -563,10 +608,6 @@ textarea {
   text-decoration: none;
 }
 
-.header__link:hover, .header__link:focus, .header__link:active, .footer__link:active, .footer__link:hover {
-  opacity: .75;
-}
-
 .header__language-switcher {
   margin-top: 35px;
   margin-left: 27px;
@@ -592,10 +633,32 @@ textarea {
   color: #FCFCFC;
 }
 
-.header__menu-group-pic:hover, .header__menu-group-pic:focus, .phone:hover, .phone:focus, .email:hover ,.email:focus, .language-option:hover, .language-option:focus, .language-separator:hover, .language-separator:focus  {
-  opacity: .75;
+
+.header__link:hover, 
+.header__link:focus, 
+.header__link:active, 
+.footer__link:active,
+.footer__link:hover,
+.header__language-option:hover,
+.header__language-option:focus,
+.header__menu-group-pic:hover,
+.header__menu-group-pic:focus,
+.phone:hover,
+.phone:focus,
+.email:hover,
+.email:focus,
+.language-option:hover,
+.language-option:focus,
+.language-separator:hover,
+.language-separator:focus,
+.cars__pic-decsr:hover,
+.cars__pic-decsr:focus,
+.footer__text:hover,
+.footer__text:focus {
+  opacity: .99;
+  transform: scale(1.2);
 }
-  
+
 
 /* MAIN */
 
@@ -688,6 +751,8 @@ textarea {
   border-radius: 19.6579px;
   padding-inline: 10px;
   margin-left: -45px;
+  max-width: 400px;
+  max-height: 230px;
 }
 
 .intro__arrow-btn {
@@ -737,22 +802,6 @@ textarea {
   margin-top: 61px;
 }
 
-.cars__tab-active {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 89.02%;
-  text-align: center;
-  color: #FEFEFE;
-  width: 279px;
-  height: 77px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #363844;
-  border-radius: 13.7097px 13.7097px 0px 0px;
-  margin-right: 10px;
-}
-
 .cars__tab {
   font-weight: 700;
   font-size: 20px;
@@ -767,6 +816,24 @@ textarea {
   border: 1px solid rgba(165, 165, 165, 0.2);
   border-radius: 13.7097px 13.7097px 0px 0px;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.cars__tab-active {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 89.02%;
+  text-align: center;
+  color: #FEFEFE;
+  width: 279px;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #363844;
+  border-radius: 13.7097px 13.7097px 0px 0px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .cars__tab:last-child {
@@ -811,17 +878,21 @@ textarea {
 }
 
 .cars__load.btn {
-  font: 400 14px/19px uppercase #363844;
+  font: 400 14px/19px uppercase;
+  color: #363844;
 }
 
-#car-pic {
+[id^="car-pic"] {
   margin-bottom: 25px;
 }
 
 .cars__pic-decsr {
-  font: 600 16px/130% center #363844;
-  text-decoration: none;
+  font: 600 16px/130% sans-serif;
+  /* color: #363844; */
+  text-align: center;
+  /* text-decoration: none; */
 }
+
 /* CARS END */
 /* NEWS START */
 .news__section {
@@ -1015,11 +1086,19 @@ textarea {
   margin-bottom: 99px;
 }
 
-.partners__grid img {
+.partners__grid-img img {
   margin-right: 95px;
 }
 
 .partners__grid img:last-child {
+  margin-right: 0px;
+}
+
+.partners__grid-img {
+  margin-right: 95px;
+}
+
+.partners__grid-img:last-child {
   margin-right: 0px;
 }
 /* PARTNERS END */
@@ -1090,6 +1169,8 @@ textarea {
   line-height: 135%;
   color: #FEFEFE;
   text-shadow: 19px 41px 8px rgba(0, 0, 0, 0.25);
+  background: #FCFCFC;
+  border-radius: 10px;
 }
 
 .advantages__arrows-btn {
